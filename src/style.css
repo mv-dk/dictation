@@ -1,0 +1,125 @@
+* {
+  font-family: Calibri;
+  font-size: 110%;
+}
+
+.dictation {
+  display: none;
+}
+
+.sentenceContainer {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 4px;
+}
+
+input[type="text"] {
+  margin: 4px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid gold;
+  /*background-color: #f7f861;*/
+  
+}
+
+input[type="button"] {
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.sentenceAnswerButton {
+  background-color: #f44336;
+  border-width: 0px;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.sentenceAnswerButton:hover {
+  background-color: #ff5346;
+  border-radius: 15px;
+}
+
+.playButton {
+  background-color: #5443f5;
+  border-width: 0px;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.playButton:hover {
+  background-color: #6a5aff;
+  border-radius: 15px;
+}
+
+input.correctInput{
+  background-color: #dcffb6;
+}
+
+input.wrongInput {
+  background-color: #ffd1b1;;
+}
+
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 200%;
+}
+
+div#content {
+  background-color: white;
+  
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+@media screen and (max-device-width: 800px) {
+  font-size: 150%;
+}
+
+div.menuArea {
+    height: initial;
+    font-size: 100%;
+    border: 1px solid gray;
+}
+
+li {
+    font-size: 80%;
+}
+
+.menuArea.closed ul#menu {
+    display:none;
+}
+
+div.menuArea p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*
+@media screen and (max-device-width: 480px) {
+  body {
+	background-color: yellow;
+	max-width: 1200px;
+  }
+
+  * { font-size: 130%; }
+  h1 { font-size: 300%; }
+
+  input[type="button"] {
+	  border-radius: 15px;
+  }
+
+  input[type="text"] {
+	  margin: 6px;
+  }
+
+}
+*/
