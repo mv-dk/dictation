@@ -30,18 +30,7 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Deploy via ssh
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-      # Copy the files to the destination website
-      - name: Rsync Deployments Action
-        uses: Burnett01/rsync-deployments@4.1
-        with:
-          switches: rz
-          path: src/
-          remote_path: /var/www/html/dictation2/
-          remote_host: ${{ secrets.REMOTE_HOST }}
-          remote_user: ${{ secrets.REMOTE_USER }}
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+           echo "${{ secrets.SSH_KEY }}" > .ssh/id_rsa_key
+           scp -i .ssh/id_rsa_key "src/*" ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.DIR }}
