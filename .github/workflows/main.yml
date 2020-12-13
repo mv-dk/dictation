@@ -33,4 +33,4 @@ jobs:
       - name: Deploy via ssh
         run: |
            echo "${{ secrets.SSH_KEY }}" > id_rsa_key
-           scp -i .id_rsa_key "src/*" ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.DIR }}
+           scp -i id_rsa_key "src/*" ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.DIR }}
